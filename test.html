@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Testimonials</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .carousel-item {
+            flex: 0 0 100%;
+            padding: 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .carousel-item {
+                flex: 0 0 50%;
+            }
+        }
+
+        .carousel-controls {
+            position: absolute;
+            bottom: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .carousel-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #CBD5E0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background-color: #4A5568;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-nav:hover {
+            background-color: white;
+        }
+
+        .carousel-prev {
+            left: 1rem;
+        }
+
+        .carousel-next {
+            right: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 flex justify-center items-center min-h-screen p-8">
+    <div class="carousel-container max-w-6xl mx-auto">
+        <div class="carousel-track">
+            <!-- Testimonial 1 -->
+            <div class="carousel-item">
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture of Johnson Cecila" class="w-16 h-16 rounded-full" src="/api/placeholder/60/60"/>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Johnson Cecila</h3>
+                            <p class="text-green-500">CEO /Founder</p>
+                        </div>
+                        <div class="ml-auto text-green-500 text-3xl">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-700">
+                        This is one of the BEST THEMES I have ever worked with. The extra bells and whistles added to it are amazing.
+                    </p>
+                </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="carousel-item">
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture of Sachin Diwar" class="w-16 h-16 rounded-full" src="/api/placeholder/60/60"/>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Sachin Diwar</h3>
+                            <p class="text-green-500">Managing Director</p>
+                        </div>
+                        <div class="ml-auto text-green-500 text-3xl">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-700">
+                        Working with several word press themes and templates the last years, I only can say this is the best in every level.
+                    </p>
+                </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="carousel-item">
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture of Alex Johnson" class="w-16 h-16 rounded-full" src="/api/placeholder/60/60"/>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Alex Johnson</h3>
+                            <p class="text-green-500">Product Manager</p>
+                        </div>
+                        <div class="ml-auto text-green-500 text-3xl">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-700">
+                        The themes and templates provided are top-notch. The customer support is very responsive and helpful.
+                    </p>
+                </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="carousel-item">
+                <div class="bg-white rounded-lg shadow-lg p-6 h-full">
+                    <div class="flex items-center space-x-4">
+                        <img alt="Profile picture of Maria Smith" class="w-16 h-16 rounded-full" src="/api/placeholder/60/60"/>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900">Maria Smith</h3>
+                            <p class="text-green-500">Designer</p>
+                        </div>
+                        <div class="ml-auto text-green-500 text-3xl">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-700">
+                        I have been using these themes for a while now, and I must say they are the best in the market.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <button class="carousel-nav carousel-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-nav carousel-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Dots -->
+        <div class="carousel-controls"></div>
+    </div>
+
+    <script>
+        class Carousel {
+            constructor(container) {
+                this.container = container;
+                this.track = container.querySelector('.carousel-track');
+                this.items = container.querySelectorAll('.carousel-item');
+                this.controls = container.querySelector('.carousel-controls');
+                this.currentIndex = 0;
+                this.itemWidth = 100;
+                this.itemsPerView = window.innerWidth >= 768 ? 2 : 1;
+                this.maxIndex = Math.ceil(this.items.length / this.itemsPerView) - 1;
+                this.autoplayInterval = null;
+                
+                this.setupControls();
+                this.setupNavigation();
+                this.startAutoplay();
+                this.setupEventListeners();
+            }
+            
+            setupControls() {
+                for (let i = 0; i <= this.maxIndex; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                    dot.addEventListener('click', () => this.goToSlide(i));
+                    this.controls.appendChild(dot);
+                }
+            }
+            
+            setupNavigation() {
+                const prev = this.container.querySelector('.carousel-prev');
+                const next = this.container.querySelector('.carousel-next');
+                
+                prev.addEventListener('click', () => this.prevSlide());
+                next.addEventListener('click', () => this.nextSlide());
+            }
+            
+            setupEventListeners() {
+                this.container.addEventListener('mouseenter', () => this.stopAutoplay());
+                this.container.addEventListener('mouseleave', () => this.startAutoplay());
+            }
+            
+            updateDots() {
+                const dots = this.controls.querySelectorAll('.carousel-dot');
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === this.currentIndex);
+                });
+            }
+            
+            goToSlide(index) {
+                this.currentIndex = index;
+                const offset = -(this.currentIndex * (100 / this.itemsPerView));
+                this.track.style.transform = `translateX(${offset}%)`;
+                this.updateDots();
+            }
+            
+            nextSlide() {
+                this.currentIndex = (this.currentIndex + 1) % (this.maxIndex + 1);
+                this.goToSlide(this.currentIndex);
+            }
+            
+            prevSlide() {
+                this.currentIndex = (this.currentIndex - 1 + (this.maxIndex + 1)) % (this.maxIndex + 1);
+                this.goToSlide(this.currentIndex);
+            }
+            
+            startAutoplay() {
+                this.stopAutoplay();
+                this.autoplayInterval = setInterval(() => this.nextSlide(), 4000);
+            }
+            
+            stopAutoplay() {
+                if (this.autoplayInterval) {
+                    clearInterval(this.autoplayInterval);
+                    this.autoplayInterval = null;
+                }
+            }
+        }
+
+        // Initialize carousel
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousel = new Carousel(document.querySelector('.carousel-container'));
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                const newItemsPerView = window.innerWidth >= 768 ? 2 : 1;
+                if (carousel.itemsPerView !== newItemsPerView) {
+                    carousel.itemsPerView = newItemsPerView;
+                    carousel.maxIndex = Math.ceil(carousel.items.length / carousel.itemsPerView) - 1;
+                    carousel.currentIndex = Math.min(carousel.currentIndex, carousel.maxIndex);
+                    carousel.goToSlide(carousel.currentIndex);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
