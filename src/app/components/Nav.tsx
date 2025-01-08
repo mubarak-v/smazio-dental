@@ -8,97 +8,42 @@ function Nav() {
 
   return (
     <>
- 
-
-      <nav className="p-4 bg-[#98c73d] text-black shadow-md">
-        <div className="container mx-auto flex justify-center items-center">
-          <ul className="flex space-x-8">
-            <li>
-              <a className="hover:text-gray-700" href="/home">
-                Home
+      <body className="font-roboto">
+        <nav className="p-4 bg-[#98c73d] text-black shadow-md">
+          <div className="container mx-auto flex justify-between items-center">
+            <div className="flex items-center space-x-4">
+              <a href="/home" className="text-lg font-bold hover:text-gray-700">Home</a>
+              <div className="relative group">
+                <a
+                  className="text-lg font-bold hover:text-gray-700"
+                  href="/about/our-clinics"
+                >
+                  About
+                </a>
+              </div>
+              <a href="/services" className="text-lg font-bold hover:text-gray-700">Services</a>
+              <a href="/contact" className="text-lg font-bold hover:text-gray-700">Contact</a>
+            </div>
+            <div className="flex items-center space-x-4">
+              <a href="https://facebook.com" target="_blank" className="hover:text-gray-700">
+                <i className="fab fa-facebook-f"></i>
               </a>
-            </li>
-            <li className="relative">
-              <button
-                onClick={() => setIsAboutOpen(!isAboutOpen)}
-                className="hover:text-gray-700 dropdown-toggle"
+              <a href="https://twitter.com" target="_blank" className="hover:text-gray-700">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" className="hover:text-gray-700">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                href="/appointment"
+                className="px-4 py-2 bg-black text-white rounded hover:bg-gray-800"
               >
-                About
-              </button>
-              {isAboutOpen && (
-                <ul className="absolute bg-white mt-2 space-y-2 p-2 rounded shadow-lg">
-                  <li>
-                    <a className="block px-4 py-2 hover:bg-gray-200" href="/about/our-clinics">
-                      Our Clinics
-                    </a>
-                  </li>
-                  <li>
-                    <a className="block px-4 py-2 hover:bg-gray-200" href="#">
-                      Directors
-                    </a>
-                  </li>
-                  <li>
-                    <a className="block px-4 py-2 hover:bg-gray-200" href="#">
-                      Team
-                    </a>
-                  </li>
-                  <li>
-                    <a className="block px-4 py-2 hover:bg-gray-200" href="#">
-                      Careers
-                    </a>
-                  </li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <a className="hover:text-gray-700" href="#">
-                Services
+                Take an Appointment
               </a>
-            </li>
-            <li className="relative">
-              <button
-                onClick={() => setIsGalleryOpen(!isGalleryOpen)}
-                className="hover:text-gray-700 dropdown-toggle"
-              >
-                Gallery
-              </button>
-              {isGalleryOpen && (
-                <ul className="absolute bg-white mt-2 space-y-2 p-2 rounded shadow-lg">
-                  <li>
-                    <a className="block px-4 py-2 hover:bg-gray-200" href="#">
-                      Before and After
-                    </a>
-                  </li>
-                  <li>
-                    <a className="block px-4 py-2 hover:bg-gray-200" href="#">
-                      Testimonials
-                    </a>
-                  </li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <a className="hover:text-gray-700" href="#">
-                Blog
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-gray-700" href="#">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <header className="text-center py-20 bg-[#98c73d] text-white">
-        <h1 className="text-5xl font-bold"> We design your smile</h1>
-        <p className="mt-4 text-xl">A passionate group of dentists working together to spread happiness all over the world through smazio</p>
-      </header>
-
-
-
-  
+            </div>
+          </div>
+        </nav>
+      </body>
     </>
   );
 }
