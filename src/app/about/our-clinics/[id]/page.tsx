@@ -1,22 +1,58 @@
 import ClinicDetails from "../../../data/clinics"
-async function   Details(props) {
-    const clinicId = await (props.params).id
-    console.log(clinicId)
+import Image from "next/image";
+// type Clinic = {
+//   id: number;
+//   description: string;
+//   image: string[];
+// }
+type clinicParams ={
+  params: Promise<{ id: string }>
+
+}
+async function   Details({params}:clinicParams) {
+  
+
+    const clinicId = await(params)
+    
+    
+    
     const clinicDetails = ClinicDetails.find(p=>
         
-         p.id == clinicId
+         p.id == (clinicId.id)
 
     )
-    console.log(clinicDetails)
   
-    console.log(clinicDetails.name)
-   
+ 
 
     return ( <>
-    <h1 style={{color:"black"}}>this is details page</h1>
-    <h1 style={{color:"red"}}>
-        {clinicDetails.name}
-    </h1>
+    <div  className="bg-gray-100">
+    <div style={{width:"100%"}}  className="container bg-gray-100 mx-auto p-6   rounded-lg mt-10">
+     <div className="flex flex-col md:flex-row">
+      <div className="md:w-full">
+       <h2 className="text-2xl font-bold text-gray-800">
+        Welcome to Our Dental Clinic
+       </h2>
+       <p className="mt-4 text-gray-600">
+       {clinicDetails?.description}       </p>
+       <p className="mt-4 text-gray-600">
+        Our state-of-the-art facility is equipped with the latest technology to provide you with the best possible care. We prioritize patient comfort and strive to create a welcoming and relaxing environment for all our patients.
+       </p>
+      </div>
+     </div>
+    </div>
+</div>
+    <div style={{display:"flex",flexWrap:"wrap", }} className="container">
+  {clinicDetails && clinicDetails.image.map((img, index) => (
+    <Image style={{width:"300px", margin:"15px", height:"300px"}}
+      key={index} // Ensure each child in a list has a unique key
+      className="card-img-top"
+      src={img}
+      alt={`Smazio Dental Image ${index + 1}`} // Provide a descriptive alt text
+      width={1500}
+      height={1500} // Adjust the height
+    />
+  ))}
+</div>
 
     </> );
 }

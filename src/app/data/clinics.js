@@ -1,66 +1,142 @@
-// data/locations.js
 const locations = [
-    {
-      id: 1,
+  {
+      id: '1',
       name: "SMAZIO DENTAL KOTTAKKAL",
-      image: "/images/clinic images/smazio dental kottakkal.jpg",
-      description: "",
-    },
-    {
-      id: 2,
+      image: [
+          "/images/clinic images/smazio dental kottakkal.jpg",
+          "/images/clinic images/smazio dental kottakkal 1.jpg",
+          "/images/clinic images/smazio dental kottakkal 2.jpg",
+          "/images/clinic images/smazio dental kottakkal 3.jpg",
+          "/images/clinic images/smazio dental kottakkal 4.jpg",
+          "/images/clinic images/smazio dental kottakkal 5.jpg",
+          "/images/clinic images/smazio dental kottakkal 6.jpg",
+          "/images/clinic images/smazio dental kottakkal 7.jpg",
+          "/images/clinic images/smazio dental kottakkal 8.jpg",
+          "/images/clinic images/smazio dental kottakkal 9.jpg",
+          "/images/clinic images/smazio dental kottakkal 10.jpg",
+          "/images/clinic images/smazio dental kottakkal 11.jpg",
+      ],
+      description: "Located in the heart of Kottakkal, Smazio Dental offers advanced dental care services, including cosmetic dentistry, orthodontics, and dental implants.",
+  },
+  {
+      id: '2',
       name: "SMAZIO THANALUR",
-      image: "/images/clinic images/SMAZIO THANALUR.jpg",
-      description: "",
-    },
-    {
-      id: 3,
+      image: [
+          "/images/clinic images/SMAZIO THANALUR.jpg",
+          "/images/clinic images/SMAZIO THANALUR 1.jpg",
+          "/images/clinic images/SMAZIO THANALUR 2.jpg",
+          "/images/clinic images/SMAZIO THANALUR 3.jpg",
+          "/images/clinic images/SMAZIO THANALUR 4.jpg",
+          "/images/clinic images/SMAZIO THANALUR 5.jpg",
+      ],
+      description: "Smazio Thanalur provides exceptional dental care with a focus on patient comfort and state-of-the-art technology.",
+  },
+  {
+      id:' 3',
       name: "QUEENS CHEMBRA",
-      image: "/images/clinic images/QUEENS PANAKKAD.jpg",
-      description: "",
-    },
-    {
-      id: 4,
+      image: [
+          "/images/clinic images/QUEENS CHEMBRA.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 1.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 2.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 3.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 4.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 5.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 6.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 7.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 8.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 9.jpg",
+      ],
+      description: "Queens Chembra specializes in family dentistry, offering comprehensive care for patients of all ages.",
+  },
+  {
+      id:' 4',
       name: "AL SHIFA OTHUKKUNGAL",
-      image: "/images/clinic images/AL SHIFA OTHUKKUNGAL.jpg",
-      description: "",
-    },
-    {
-      id: 5,
-      name: "QUEES KUNDOOR",
-      image: "/images/clinic images/QUEENS CHEMBRA.jpg",
-      description: "",
-    },
-    {
-      id: 6,
+      image: [
+          "/images/clinic images/AL SHIFA OTHUKKUNGAL.jpg",
+          "/images/clinic images/AL SHIFA OTHUKKUNGAL 1.jpg",
+          "/images/clinic images/AL SHIFA OTHUKKUNGAL 2.jpg",
+          "/images/clinic images/AL SHIFA OTHUKKUNGAL 3.jpg",
+          "/images/clinic images/AL SHIFA OTHUKKUNGAL 4.jpg",
+          "/images/clinic images/AL SHIFA OTHUKKUNGAL 5.jpg",
+      ],
+      description: "Al Shifa Othukkungal is known for its skilled team and modern equipment, ensuring top-notch dental treatments.",
+  },
+  {
+      id: '5',
+      name: "QUEENS KUNDOOR",
+      image: [
+          "/images/clinic images/QUEENS CHEMBRA.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 1.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 2.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 3.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 4.jpg",
+          "/images/clinic images/QUEENS CHEMBRA 5.jpg",
+      ],
+      description: "Located in Kundoor, Queens Dental Clinic offers a range of dental services, including preventive and restorative treatments.",
+  },
+  {
+      id: '6',
       name: "MAZI PUTHUPARAMBA",
-      image: "/images/clinic images/MAZI PUTHUPARAMBA.jpg",
-      description: "",
-    },
-    {
-      id: 7,
+      image: [
+          "/images/clinic images/MAZI PUTHUPARAMBA.jpg",
+          "/images/clinic images/MAZI PUTHUPARAMBA 1.jpg",
+          "/images/clinic images/MAZI PUTHUPARAMBA 2.jpg",
+          "/images/clinic images/MAZI PUTHUPARAMBA 3.jpg",
+          "/images/clinic images/MAZI PUTHUPARAMBA 4.jpg",
+      ],
+      description: "Mazi Puthuparamba provides quality dental care services tailored to meet individual needs.",
+  },
+  {
+      id: '7',
       name: "QUEENS PANAKKAD",
-      image: "/images/clinic images/QUEENS PANAKKAD.jpg",
-      description: "",
-    },
-    {
-      id: 8,
+      image: [
+          "/images/clinic images/QUEENS PANAKKAD.jpg",
+          "/images/clinic images/QUEENS PANAKKAD 1.jpg",
+          "/images/clinic images/QUEENS PANAKKAD 2.jpg",
+          "/images/clinic images/QUEENS PANAKKAD 3.jpg",
+          "/images/clinic images/QUEENS PANAKKAD 4.jpg",
+          "/images/clinic images/QUEENS PANAKKAD 5.jpg",
+      ],
+      description: "Queens Panakkad offers a welcoming environment with a focus on excellent dental care and patient satisfaction.",
+  },
+  {
+      id: '8',
       name: "DAYA RANDATHANI",
-      image: "/images/clinic images/DAYA RANDATHANI.jpg",
-      description: "",
-    },
-    {
-      id: 9,
+      image: [
+          "/images/clinic images/DAYA RANDATHANI.jpg",
+          "/images/clinic images/DAYA RANDATHANI 1.jpg",
+          "/images/clinic images/DAYA RANDATHANI 2.jpg",
+          "/images/clinic images/DAYA RANDATHANI 3.jpg",
+          "/images/clinic images/DAYA RANDATHANI 4.jpg",
+          "/images/clinic images/DAYA RANDATHANI 5.jpg",
+      ],
+      description: "Daya Randathani is a trusted name in dental care, offering a wide range of services for oral health and hygiene.",
+  },
+  {
+      id: '9',
       name: "AL SHIFA TANALUR",
-      image: "/images/clinic images/AL SHIFA TANALUR.jpg",
-      description: "",
-    },
-    {
-      id: 10,
+      image: [
+          "/images/clinic images/AL SHIFA TANALUR.jpg",
+          "/images/clinic images/AL SHIFA TANALUR 1.jpg",
+          "/images/clinic images/AL SHIFA TANALUR 2.jpg",
+          "/images/clinic images/AL SHIFA TANALUR 3.jpg",
+          "/images/clinic images/AL SHIFA TANALUR 4.jpg",
+      ],
+      description: "Al Shifa Tanalur focuses on providing personalized dental care with a patient-first approach.",
+  },
+  {
+      id: '10',
       name: "MAZI OTHUKUNGAL",
-      image: "/images/clinic images/MAZI OTHUKUNGAL.jpg",
-      description: "",
-    },
-  ];
-  
-  export default locations;
-  
+      image: [
+          "/images/clinic images/MAZI OTHUKUNGAL.jpg",
+          "/images/clinic images/MAZI OTHUKUNGAL 1.jpg",
+          "/images/clinic images/MAZI OTHUKUNGAL 2.jpg",
+          "/images/clinic images/MAZI OTHUKUNGAL 3.jpg",
+          "/images/clinic images/MAZI OTHUKUNGAL 4.jpg",
+          "/images/clinic images/MAZI OTHUKUNGAL 5.jpg",
+      ],
+      description: "Mazi Othukkungal is equipped with advanced technology and experienced professionals to deliver superior dental care.",
+  },
+];
+
+export default locations;
