@@ -35,6 +35,7 @@ function CardCarousel() {
                 <div className="carousel-indicators">
                     {clinicChunks.map((_, index) => (
                         <button
+                        style={{display:"none"}}
                             key={index}
                             type="button"
                             data-bs-target="#cardCarousel"
