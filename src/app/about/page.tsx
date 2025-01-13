@@ -1,5 +1,4 @@
-import Card from "../components/Card";
-import Clinics from "../../app/data/clinics";
+
 
 function About() {
     return ( <>

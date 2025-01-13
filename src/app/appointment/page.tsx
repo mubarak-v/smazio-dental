@@ -3,16 +3,25 @@
 import React, { useState, useEffect } from 'react';
 import Clinics from "../data/clinics"
 
+type appointmentType ={
+    name: string,
+    phone: string,
+    date: string,
+    clinic: string,
+    message: string,
+}
+
 function Appointment() {
 
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<appointmentType>({
         name: '',
         phone: '',
         date: '',
         clinic: '',
         message: '',
     });
-    const [appointments, setAppointments] = useState([]);
+    
+    const [appointments, setAppointments] = useState<appointmentType[]>([]);
 
     // Load appointments from localStorage on component mount
     useEffect(() => {

@@ -1,10 +1,15 @@
 import Image from "next/image";
 
-function Card( props ) {
+type CardProps = {
+  imgSrc: string;
+  title: string;
+  id: string;
+};
+
+function Card(props: CardProps) {
   return (
     <>
-
-      <div  className="card" style={{ width: "18rem", margin:"8px" }}>
+      <div className="card" style={{ width: "18rem", margin: "8px" }}>
         <Image
           className="card-img-top"
           src={props.imgSrc}
@@ -16,13 +21,15 @@ function Card( props ) {
           <h5 style={{ color: "black" }} className="card-title">
             {props.title}
           </h5>
-         
-          <a style={{ color: "white", backgroundColor:"#43ac34" }} className="btn" href={"/about/our-clinics/"+ props.id || "#"} >
+          <a
+            style={{ color: "white", backgroundColor: "#43ac34" }}
+            className="btn"
+            href={`/about/our-clinics/${props.id || "#"}`}
+          >
             Read More
           </a>
         </div>
       </div>
- 
     </>
   );
 }

@@ -3,7 +3,6 @@ import Service from "../data/treatment";
 
  function Services() {
   const serviceData = Service; // Access the data directly
-  console.log(serviceData); // Log the data to the console
 
   return (
     <main className="container mx-auto p-4">

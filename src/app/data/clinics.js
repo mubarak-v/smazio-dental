@@ -1,6 +1,6 @@
 const locations = [
   {
-      id: 1,
+      id: '1',
       name: "SMAZIO DENTAL KOTTAKKAL",
       image: [
           "/images/clinic images/smazio dental kottakkal.jpg",
@@ -19,7 +19,7 @@ const locations = [
       description: "Located in the heart of Kottakkal, Smazio Dental offers advanced dental care services, including cosmetic dentistry, orthodontics, and dental implants.",
   },
   {
-      id: 2,
+      id: '2',
       name: "SMAZIO THANALUR",
       image: [
           "/images/clinic images/SMAZIO THANALUR.jpg",
@@ -32,7 +32,7 @@ const locations = [
       description: "Smazio Thanalur provides exceptional dental care with a focus on patient comfort and state-of-the-art technology.",
   },
   {
-      id: 3,
+      id:' 3',
       name: "QUEENS CHEMBRA",
       image: [
           "/images/clinic images/QUEENS CHEMBRA.jpg",
@@ -49,7 +49,7 @@ const locations = [
       description: "Queens Chembra specializes in family dentistry, offering comprehensive care for patients of all ages.",
   },
   {
-      id: 4,
+      id:' 4',
       name: "AL SHIFA OTHUKKUNGAL",
       image: [
           "/images/clinic images/AL SHIFA OTHUKKUNGAL.jpg",
@@ -62,7 +62,7 @@ const locations = [
       description: "Al Shifa Othukkungal is known for its skilled team and modern equipment, ensuring top-notch dental treatments.",
   },
   {
-      id: 5,
+      id: '5',
       name: "QUEENS KUNDOOR",
       image: [
           "/images/clinic images/QUEENS CHEMBRA.jpg",
@@ -75,7 +75,7 @@ const locations = [
       description: "Located in Kundoor, Queens Dental Clinic offers a range of dental services, including preventive and restorative treatments.",
   },
   {
-      id: 6,
+      id: '6',
       name: "MAZI PUTHUPARAMBA",
       image: [
           "/images/clinic images/MAZI PUTHUPARAMBA.jpg",
@@ -87,7 +87,7 @@ const locations = [
       description: "Mazi Puthuparamba provides quality dental care services tailored to meet individual needs.",
   },
   {
-      id: 7,
+      id: '7',
       name: "QUEENS PANAKKAD",
       image: [
           "/images/clinic images/QUEENS PANAKKAD.jpg",
@@ -100,7 +100,7 @@ const locations = [
       description: "Queens Panakkad offers a welcoming environment with a focus on excellent dental care and patient satisfaction.",
   },
   {
-      id: 8,
+      id: '8',
       name: "DAYA RANDATHANI",
       image: [
           "/images/clinic images/DAYA RANDATHANI.jpg",
@@ -113,7 +113,7 @@ const locations = [
       description: "Daya Randathani is a trusted name in dental care, offering a wide range of services for oral health and hygiene.",
   },
   {
-      id: 9,
+      id: '9',
       name: "AL SHIFA TANALUR",
       image: [
           "/images/clinic images/AL SHIFA TANALUR.jpg",
@@ -125,7 +125,7 @@ const locations = [
       description: "Al Shifa Tanalur focuses on providing personalized dental care with a patient-first approach.",
   },
   {
-      id: 10,
+      id: '10',
       name: "MAZI OTHUKUNGAL",
       image: [
           "/images/clinic images/MAZI OTHUKUNGAL.jpg",

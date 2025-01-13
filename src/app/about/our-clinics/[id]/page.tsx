@@ -1,19 +1,26 @@
 import ClinicDetails from "../../../data/clinics"
 import Image from "next/image";
-interface Clinic {
-  id: string;
-  description: string;
-  image: string[];
+// type Clinic = {
+//   id: number;
+//   description: string;
+//   image: string[];
+// }
+type clinicParams ={
+  params: Promise<{ id: string }>
+
 }
-async function   Details(props: { params: Clinic }) {
-    const clinicId = await (props.params).id
-    console.log(clinicId)
+async function   Details({params}:clinicParams) {
+  
+
+    const clinicId = await(params)
+    
+    
+    
     const clinicDetails = ClinicDetails.find(p=>
         
-         p.id == clinicId
+         p.id == (clinicId.id)
 
     )
-    console.log(clinicDetails)
   
  
 
@@ -35,7 +42,7 @@ async function   Details(props: { params: Clinic }) {
     </div>
 </div>
     <div style={{display:"flex",flexWrap:"wrap", }} className="container">
-  {clinicDetails.image.map((img, index) => (
+  {clinicDetails && clinicDetails.image.map((img, index) => (
     <Image style={{width:"300px", margin:"15px", height:"300px"}}
       key={index} // Ensure each child in a list has a unique key
       className="card-img-top"
