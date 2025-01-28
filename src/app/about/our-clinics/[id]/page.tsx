@@ -1,10 +1,6 @@
 import ClinicDetails from "../../../data/clinics"
 import Image from "next/image";
-// type Clinic = {
-//   id: number;
-//   description: string;
-//   image: string[];
-// }
+
 type clinicParams ={
   params: Promise<{ id: string }>
 
@@ -44,12 +40,11 @@ async function   Details({params}:clinicParams) {
     <div style={{display:"flex",flexWrap:"wrap", }} className="container">
   {clinicDetails && clinicDetails.image.map((img, index) => (
     <Image style={{width:"300px", margin:"15px", height:"300px"}}
-      key={index} // Ensure each child in a list has a unique key
+      key={index} 
       className="card-img-top"
       src={img}
-      alt={`Smazio Dental Image ${index + 1}`} // Provide a descriptive alt text
+      alt={`Smazio Dental Image ${index + 1}`} 
       width={1500}
-      height={1500} // Adjust the height
     />
   ))}
 </div>

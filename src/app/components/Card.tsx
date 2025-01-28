@@ -9,6 +9,9 @@ type CardProps = {
 function Card(props: CardProps) {
   return (
     <>
+   
+
+   
       <div className="card" style={{ width: "18rem", margin: "8px" }}>
         <Image
           className="card-img-top"
@@ -30,6 +33,7 @@ function Card(props: CardProps) {
           </a>
         </div>
       </div>
+
     </>
   );
 }

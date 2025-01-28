@@ -1,4 +1,4 @@
-'use client'; // Required for using hooks and accessing browser-specific features
+'use client'; 
 
 import React, { useState, useEffect } from 'react';
 import Clinics from "../data/clinics"
@@ -23,7 +23,6 @@ function Appointment() {
     
     const [appointments, setAppointments] = useState<appointmentType[]>([]);
 
-    // Load appointments from localStorage on component mount
     useEffect(() => {
         const storedAppointments = localStorage.getItem('appointments');
         if (storedAppointments) {
@@ -39,16 +38,12 @@ function Appointment() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // Add the new appointment to the list
         const updatedAppointments = [...appointments, formData];
 
-        // Save to localStorage
         localStorage.setItem('appointments', JSON.stringify(updatedAppointments));
 
-        // Update state
         setAppointments(updatedAppointments);
 
-        // Clear the form
         setFormData({
             name: '',
             phone: '',
@@ -118,10 +113,7 @@ function Appointment() {
                                 ))
                             }
 
-                            {/* <option value="general">General Dentistry</option>
-                            <option value="orthodontics">Orthodontics</option>
-                            <option value="pediatric">Pediatric Dentistry</option>
-                            <option value="cosmetic">Cosmetic Dentistry</option> */}
+             
                         </select>
                     </div>
                     <div>

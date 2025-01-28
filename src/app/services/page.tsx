@@ -2,7 +2,7 @@ import Image from "next/image";
 import Service from "../data/treatment";
 
  function Services() {
-  const serviceData = Service; // Access the data directly
+  const serviceData = Service; 
 
   return (
     <main className="container mx-auto p-4">
@@ -13,22 +13,14 @@ import Service from "../data/treatment";
             style={{ background: "#43ac34" }}
             className="service-card p-4 rounded-lg shadow-lg text-white"
           >
-            {/* Uncomment the line below if you want to use images */}
-            {/* <Image 
-                alt={service.imageAlt} 
-                className="w-full h-40 object-cover rounded-t-lg" 
-                src={service.imageUrl} 
-                width={600} 
-                height={400} 
-              /> */}
+           
               <div style={{width:"500px", height:"400px", marginLeft:"0px"}}>
 
              
-<Image style={{width:"400px", margin:"15px", height:"400px"}}
-       // Ensure each child in a list has a unique key
+<Image style={{width:"350px", height:"400px"}}
       className="card-img-top"
       src={service.image}
-      alt={service.image} // Provide a descriptive alt text
+      alt={service.image} 
       width={600} 
                 height={400} 
     />
@@ -40,8 +32,7 @@ import Service from "../data/treatment";
         ))}
       </section>
     </main>
-  // <> <h1>this is services  page </h1>
-  // </>
+
   );
 
 }

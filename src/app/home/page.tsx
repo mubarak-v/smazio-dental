@@ -18,14 +18,7 @@ function Home() {
         <h1 className="text-4xl font-bold text-center mb-8">
           <span className="text-green-600">Our Clinics</span>
         </h1>
-        {/* <img src="" alt=""/> */}
-           {/* <Image
-                  className="card-img-top"
-                  src="/images/clinic images/AL SHIFA OTHUKKUNGAL.jpg"
-                  alt="Card image cap"
-                  width={200}
-                  height={100} // Adjusted height to a more reasonable value
-                /> */}
+       
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {clinic.map((clinic) => (
             <div
@@ -93,13 +86,12 @@ function Home() {
        2013
       </span>
      </div>
-     {/* <img alt="Dentist treating a patient" className="rounded-lg shadow-lg" height="400" src="https://storage.googleapis.com/a1aa/image/C7FTpRKYY25UL9v0ApD7lpeH0ZFtyaaMiaAkie4YeOvkdnEoA.jpg" width="600"/> */}
      <Image
                   className="card-img-top"
                   src="/images/img.jpg"
                   alt="Card image cap"
                   width={1500}
-                  height={1500} // Adjusted height to a more reasonable value
+                  height={1500} 
                 />
     </div>
    </div>
